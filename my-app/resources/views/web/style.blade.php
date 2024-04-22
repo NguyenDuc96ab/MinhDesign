@@ -383,6 +383,7 @@ header {
 
 .wwdc23 {
     margin-top: 350px;
+    color: white;
 }
 
 .wwdc23text {
@@ -404,6 +405,87 @@ footer {
     color: rgb(71, 71, 71);
 }
 
+
+
+.container1 {
+    width: 100%; /* Adjust as needed */
+}
+
+.f-grid {
+  margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.f-grid-col {
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust background color as needed */
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Căn chỉnh trên dưới */
+}
+
+/* CSS cho máy tính */
+@media screen and (min-width: 1025px) {
+    .f-grid-col {
+        grid-column: span 1 / span 3; /* Chiếm 3 cột */
+        justify-self: center; /* Căn đều theo chiều ngang */
+        align-self: center; /* Căn đều theo chiều dọc */
+    }
+}
+
+/* CSS cho điện thoại */
+@media screen and (max-width: 640px) {
+    .f-grid-col {
+        grid-column: span 1 / span 1; /* Chiếm 1 cột */
+        justify-self: center; /* Căn đều theo chiều ngang */
+        align-self: center; /* Căn đều theo chiều dọc */
+    }
+}
+
+.duan{
+  background: url("images/hero/iphone-12-pro/iphone_12_pro_large.jpg") center/cover;
+  margin-top: 50px;
+}
+
+.containerflex {
+  
+    display: flex;                  /* Kích hoạt flexbox cho phần tử chứa */
+    gap: 20px;
+    flex-direction: row;            /* Thiết lập hướng chính */
+    flex-wrap: nowrap;              /* Thiết lập chế độ wrap, khi các phần tử vượt qua kích thước hướng chính*/
+    justify-content: center;      /* Căn chỉnh nội dung bên trong container có flexbox*/
+    align-items: center;           /* Căn chỉnh phần tử con theo hướng vuông góc hướng chính*/
+    align-content: center;         /* Căn chỉnh hàng (cột) theo hướng vuông góc (chỉ hiệu lực khi nhiều hàng hoặc cột)*/
+    height: 100%;
+    padding:    5px;
+    margin-top: 10px;
+  
+}
+
+.flexitem {
+    padding: 20px;
+    background: lightblue;
+    margin: 1px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 640px) {
+    .containerflex {
+        flex-direction: column;  /* Thay đổi thành hướng dọc */
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* Điều chỉnh cho tablet */
+    .containerflex {
+        flex-direction: column;  /* Thay đổi thành hướng dọc */
+        background-size: cover;
+    }
+}
 
 
 /* end  */
