@@ -1,0 +1,111 @@
+@extends('admin.main')
+
+@section('admin.head')
+<!-- summernote -->
+<link rel="stylesheet" href="/plugins/summernote/summernote-bs4.min.css">
+@endsection
+
+@section('content')
+<div class="card-body">
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-sm-6">
+                <!-- text input -->
+                <div class="form-group">
+                    <label for="menu">Tên dự án</label>
+                    <input type="text" name="name" value="{{ $products->name }}" class="form-control" id="name"
+                        placeholder="Nhập tên dự án">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Chuyên mục (*)</label>
+                    <select class="form-control" name="category_id">
+                        <option>-- Chọn chuyên mục --</option>
+                        {!!$htmlOption!!}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="menu">Mô tả ngắn</label>
+                    <input type="text" name="description" value="{{$products->description }}" class="form-control">
+                </div>
+            </div>
+
+           
+        </div>
+
+
+
+        <div class="form-group">
+            <label>Mô tả chi tiết</label>
+            <textarea name="content" id="summernote" class="ckeditor form-control">{{ $products->content }}</textarea>
+
+        </div>
+
+        <div>
+            <div class="form-group">
+                <label>Kích hoạt</label>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" value="1" id="active" name="active"
+                        {{$products->active == 1 ? 'checked=""': ''}}>
+                    <label for="active" class="custom-control-label">Có</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" value="0" id="no_active" name="active"
+                        {{$products->active == 0 ? 'checked=""': ''}}>
+                    <label for="no_active" class="custom-control-label">Không</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="menu">Slider ảnh dự án</label>
+            <input type="file" name="images[]" class="form-control" id="upload_multi" multiple>
+            <div id="image_show_multi" style="margin-top: 20px;">
+
+                @foreach ($haha as $image)
+                <a href="/images/{{ $image->name }}">
+                    <img src="/images/{{ $image->name }}" width="100px" style="padding: 5px;">
+                </a>
+                @endforeach
+
+            </div>
+            <input type="hidden" name="images_hidden" id="images_hidden">
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Update dự án</button>
+        </div>
+        @csrf
+
+
+    </form>
+</div>
+
+@endsection
+
+@section('admin.footer-js')
+<!-- Summernote -->
+<script src="../../plugins/summernote/summernote-bs4.min.js"></script>
+<script>
+$(function() {
+    // Summernote
+    $('#summernote').summernote()
+})
+</script>
+
+<script src="/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<script>
+$(function() {
+    bsCustomFileInput.init();
+});
+</script>
+
+<script>
+CKEDITOR.replace('content');
+</script>
+@endsection

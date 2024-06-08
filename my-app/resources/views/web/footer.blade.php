@@ -1,9 +1,41 @@
-<div class="footertext1"><span>A project by <a href="https://www.github.com/montymahato">Duc
-    </a><br /><br /></span>
-      This website is a project created for educational purposes only. The content, design, and layout are based on the
-      official Apple website and are intended to showcase the skills of the creator. All content and images used on this
-      website are the property of Apple Inc. and are used solely for educational purposes. Apple Inc. does not endorse
-      or sponsor this project in any way. All copyrights, trademarks, and other intellectual property rights for the
-      content and images used on this website belong to Apple Inc. and are used under fair use guidelines. If you have
-      any questions or concerns regarding this project, please contact the creator directly.
+<div class="footertext1">
+<div class="footer-column">
+<h4>Thiết kế</h4>
+        <ul>
+            <li>Nội thất</li>
+            <li>Ngoại thất</li>
+            
+        </ul>
+    </div>
+    <div class="footer-column">
+    <h4>Xây dựng</h4>
+        <ul>
+            <li>Nhà cấp 4</li>
+            <li>Nhà 2,3 tầng</li>
+            <li>Nhà vườn</li>
+            <li>Villa</li>
+            <li>Cổ điển</li>
+        </ul>
+        </div>
+    <div class="footer-column">
+    <h4>Thi công</h4>
+        <ul>
+            <li>Tủ</li>
+            <li>Bếp</li>
+            <li>Quần áo</li>
+            
+        </ul>
+    </div>
+    <div class="footer-column">
+    <h4>Nội thất</h4>
+        <ul>
+            <li>Bàn</li>
+            <li>Sofa</li>
+            <li>Bàn ăn</li>
+            <li>Ghế thư giãn</li>
+            <li>Đèn trang trí</li>
+        </ul>
+    </div>
+    <div class="footer-column"> <h4>Quy trình thiết kế</h4>
+         </div>
     </div>

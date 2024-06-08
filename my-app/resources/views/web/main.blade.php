@@ -9,7 +9,21 @@
     <header>
     @include('web.header')
     </header>
+    <div class="container-mp nav-wrapper">
+        <!-- Begin: wrapper -->
+        <div class="wrapper mp-pusher" id="mp-pusher">
+            <div>
+                @include('Web.menu-mobile')
+            </div>
+        
 
+                <!--Scroll to Top-->
+                @include('Web.style')
+               
+
+            </div>
+        </div>
+    </div>
     @yield('content')
 
     <footer>

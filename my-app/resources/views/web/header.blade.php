@@ -1,73 +1,72 @@
 <header>
-        <div class="container">
-            <nav class="nav">
-                <ul class="nav-list nav-list-mobile">
-                    <li class="nav-item">
-                        <div class="mobile-menu">
-                            <span class="line line-top"></span>
-                            <span class="line line-bottom"></span>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link nav-link-apple">
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link nav-link-bag">
-                        </a>
-                    </li>
-                </ul>
-                <!-- nav list and nav list mobile  -->
-                <ul class="nav-list nav-list-larger">
-                    <li class="nav-item nav-item-hidden">
-                        <a href="index.html" class="nav-link nav-link-apple">
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#iMac" class="nav-link">Mac
-                        </a>
-                        
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">iPad
-                        </a>
-                        <ul class="sub-menu">
-                        <li><a href="#">Macbook</a></li>
-                        <li><a href="#">iMac</a></li>
-                        <li><a href="#">Mac Mini</a></li>
-                    </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#iphone12pro" class="nav-link">iPhone
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#watch" class="nav-link">Watch
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">TV
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Music
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Support
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link nav-link-search">
-                        </a>
-                    </li>
-                    <li class="nav-item nav-item-hidden">
-                        <a href="#" class="nav-link nav-link-bag">
-                        </a>
-                    </li>
-                </ul>
-                <!-- nav list nav list larger  -->
-            </nav>
+    <div class="header-container">
+        <div class="logo-container">
+        <img src="images/icons/logo1.png" alt="Logo" class="logo">
         </div>
-    </header>
+        <div class="navigation-container">
+            <div class="navigation">
+                <ul class="menu">
+                    <div class="close-btn">&times;</div>
+                    <li class="menu-item">
+                        <a href="/">Trang chủ</a>
+                    </li>
+                    @foreach($category as $item)
+                        <li class="menu-item">
+                            <a class="sub-btn" href="/duan/{{$item->slug}}/{{$item->id}}">{{$item->name}} &#9660;</a>
+                            @if($item->categoryChildrent && $item->categoryChildrent->count() > 0)
+                                <ul class="sub-menu">
+                                    @foreach($item->categoryChildrent as $children)
+                                        <li class="sub-item more">
+                                            <a class="sub-btn" href="/duan/{{$children->slug}}/{{$children->id}}">{{$children->name}} </a>
+                                            @if($children->categoryChildrent && $children->categoryChildrent->count() > 0)
+                                                <ul class="more-menu">
+                                                    @foreach($children->categoryChildrent as $grandChild)
+                                                        <li class="more-item"><a href="/duan/{{$grandChild->slug}}/{{$grandChild->id}}">{{$grandChild->name}}</a></li>
+                                                    @endforeach
+                                                </ul>
+                                            @endif
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            @endif
+                        </li>
+                    @endforeach
+                    <li class="menu-item">
+                        <a href="{{ url('/quytrinhthietke/' . Str::slug('Quy trình thiết kế')) }}" class="" title="Quy trình thiết kế">
+                            <span>Quy trình thiết kế</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="extra-container">
+            <a href="/admin/users/login" class="login-btn">Đăng nhập</a>
+            <span class="contact-info">Liên hệ: 0123456789</span>
+        </div>
+        <div class="menu-btn">&#9776;</div>
+    </div>
+</header>
+
+<script>
+    $(document).ready(function() {
+        $(".sub-btn").click(function() {
+            $(this).next(".sub-menu").slideToggle();
+        });
+
+        $(".more-btn").click(function() {
+            $(this).next(".more-menu").slideToggle();
+        });
+
+        var menu = document.querySelector(".menu");
+        var menuBtn = document.querySelector(".menu-btn");
+        var closeBtn = document.querySelector(".close-btn");
+        menuBtn.addEventListener("click", () => {
+            menu.classList.add('active');
+        });
+        closeBtn.addEventListener('click', () => {
+            menu.classList.remove("active");
+        });
+
+      
+    });
+</script>

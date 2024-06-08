@@ -4,73 +4,47 @@
 
 
 
-<!-- <section class="duan">
-    <div class="container1">
-      
-        <div class="f-grid">
-            <div class="f-grid-col">
-            <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
-                <p>THIẾT KẾ VÀ THI CÔNG HOÀN THIỆN NỘI THẤT NHÀ NGUYÊN CĂN - ANH ĐOÀN</p>
-                <p>Khảo sát, thiết kế và thi công hoàn thiện nội thất nhà nguyên căn bằng cật liệu chính là MDF kết hợp với nhôm kính và ốp tường PVC cho một không gian vừa sang trọng vừa hiện đại từ không gian phòng khách của gia đình.</p> 
-
-            </div>
-            <div class="f-grid-col">
-            <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
-                <p>Tên hình ảnh 1</p>
-                <p>Mô tả cho hình ảnh 1</p>
-            </div>
-            <div class="f-grid-col">
-            <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
-                <p>Tên hình ảnh 1</p>
-                <p>Mô tả cho hình ảnh 1</p>
-            </div>
-            <div class="f-grid-col">
-            <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
-                <p>Tên hình ảnh 1</p>
-                <p>Mô tả cho hình ảnh 1</p>
-            </div>
-            <div class="f-grid-col">
-            <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
-                <p>Tên hình ảnh 1</p>
-                <p>Mô tả cho hình ảnh 1</p>
-            </div>
-            <div class="f-grid-col">
-            <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
-                <p>Tên hình ảnh 1</p>
-                <p>Mô tả cho hình ảnh 1</p>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 
 <section class="duan">
+    
 <div class="title">
             <h2 class="title-heading">Dự án hoàn thành</h2>
     
         </div>
     <div class="containerflex">
     
-        <div class="flexitem">
-            <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
+    <div class="flexitem">
+        <video width="500" height="300" controls>
+        <source src="{{ asset('images/video/154511-807726725_small.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <p>Tên video</p>
+            <p>Mô tả cho video</p>
+        </div>
+    </div>
+    <div class="flexitem">
+        <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
+        <div class="overlay">
             <p>Tên hình ảnh 1</p>
             <p>Mô tả cho hình ảnh 1</p>
         </div>
-        <div class="flexitem">
-            <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
+    </div>
+    <div class="flexitem">
+        <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
+        <div class="overlay">
             <p>Tên hình ảnh 1</p>
             <p>Mô tả cho hình ảnh 1</p>
         </div>
-        <div class="flexitem">
-            <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
+    </div>
+    <div class="flexitem">
+        <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
+        <div class="overlay">
             <p>Tên hình ảnh 1</p>
             <p>Mô tả cho hình ảnh 1</p>
         </div>
-        <div class="flexitem">
-            <img src="https://dailammocfurniture.com/watermark/news/365x295x1/upload/news/project-1-1495.png" alt="Image 1">
-            <p>Tên hình ảnh 1</p>
-            <p>Mô tả cho hình ảnh 1</p>
-        </div>
+    </div>
     </div>
 </section> 
  
@@ -85,11 +59,13 @@
             <p class="title-price">Giá chỉ từ 99.000/1m2</p>
         </div>
         <div class="cta">
-            <a href="#" class="cta-link">Tìm hiểu thêm</a>
-            <a href="#" class="cta-link">Đặt lịch</a>
+        <a href="#"><button class="cta-button">Tìm hiểu thêm</button></a>
+        <a href="#"><button class="cta-button-ver">Đặt lịch</button></a>
         </div>
     </div>
 </section>
+
+
 
 <section class="hero imac" id="iMac">
     <div class="container">
@@ -99,8 +75,9 @@
             <p class="title-price">Giá chỉ từ 3.200000/1m2</p>
         </div>
         <div class="cta">
-            <a href="#" class="cta-link">Tìm hiểu thêm</a>
-            <a href="#" class="cta-link">Lên khai toán</a>
+        <a href="#"><button class="cta-button">Tìm hiểu thêm</button></a>
+        <a href="#"><button class="cta-button-ver">Lên khai toán</button></a>
+          
         </div>
     </div>
 </section>
@@ -113,8 +90,8 @@
           
         </div>
         <div class="cta">
-            <a href="#" class="cta-link">Quy trình thi công</a>
-            <a href="#" class="cta-link">Báo giá</a>
+            <a href="#"><button class="cta-button">Quy trình thi công</button></a>
+            <a href="#"><button class="cta-button-ver">Báo giá</button></a>
         </div>
     </div>
 </section>
@@ -127,11 +104,13 @@
             <h3 class="title-sub-heading">Sofa-Đèn-Bàn ăn</h3>
         </div>
         <div class="cta">
-            <a href="#" class="cta-link">Xem sản phẩm</a>
+        <a href="#"><button class="cta-button">Xem sản phẩm</button></a>
            
         </div>
     </div>
 </section>
+
+
 
 <div class="mainpage4">
     <div class="promo1 grid-item">
@@ -141,8 +120,9 @@
             <p class="title-price">Giá chỉ từ 99.000/1m2</p>
         </div>
         <div class="cta">
-            <a href="#" class="cta-link">Tìm hiểu thêm</a>
-            <a href="#" class="cta-link">Đặt lịch</a>
+        <a href="#"><button class="cta-button">Tìm hiểu thêm</button></a>
+        <a href="#"><button class="cta-button-ver">Đặt lịch</button></a>
+         
         </div>
     </div>
     <div class="promo2 grid-item">
@@ -150,38 +130,36 @@
             <span class="wwdc23">   <h2 class="title-heading">Xây dựng trọn gói</h2></span>
             <span class="wwdc23text">Hiện đại-Tân cổ</span>
             <span class="wwdc23text">Giá chỉ từ 3.200000/1m2</span>
-            <div class="mainpagelink"><a href="">Tìm hiểu thêm></a></div>
-            <div class="mainpagelink"><a href="">Lên khai toán></a></div>
+            <div class="cta">
+        <a href="#"><button class="cta-button">Tìm hiểu thêm</button></a>
+        <a href="#"><button class="cta-button-ver">Lên khai toán</button></a>
+         
+        </div>
         </div>
     </div>
     <div class="promo3 grid-item">
         <div class="mp-default-text">
-            <span id="ipadtitle">Thi công nội thất</span>
-            <span>An cường-Thanh thùy-Ba thanh</span>
-            <div class="mainpagelink"><a href="">Quy trình thi công ></a> <a href="">Báo giá ></a></div>
+            <span id="ipadtitle" style="font-family: 'Times New Roman', Times, serif;">Thi công nội thất</span>
+            <span style="font-family: 'Times New Roman', Times, serif; margin-top: 20px;font-size:18px">An cường-Thanh thùy-Ba thanh</span>
+            <div class="mainpagelink"> <div class="cta">
+        <a href="#"><button class="cta-button">Quy trình thi công</button></a>
+        <a href="#"><button class="cta-button-ver">Báo giá</button></a>
+         
+        </div></div>
         </div>
     </div>
     <div class="promo4 grid-item">
         <div class="mp-default-text">
-            <span id="mactitle">Nội thất nhập khẩu</span>
-            <span id="macdescription">Sofa-Đèn-Bàn ăn</span>
-            <div class="mainpagelink"><a href="">Xem sản phẩm ></a> </div>
+            <span id="mactitle"style="font-family: 'Times New Roman', Times, serif; ">Nội thất nhập khẩu</span>
+            <span id="macdescription"style="font-family: 'Times New Roman', Times, serif;margin-top: 20px;">Sofa-Đèn-Bàn ăn</span>
+            <div class="mainpagelink"> <div class="cta">
+        <a href="#"><button class="cta-button">Xem sản phẩm</button></a>
+       
+         
+        </div> </div>
         </div>
     </div>
-    <!-- <div class="promo5 grid-item">
-        <div class="mp-default-text">
-            <span class="motherday">Take your pic of Mother Day's gifts.</span>
-            <span class="motherday2">So many ways to thank whoever you call mom.</span>
-            <div class="mainpagelink"><a href="">Shop the gift guide ></a></div>
-        </div>
-    </div>
-    <div class="promo6 grid-item">
-        <div class="mp-default-text">
-            <span class="applewatchcontainer"><img src="https://www.apple.com/v/home/az/images/logos/apple-watch-ultra/promo_logo_apple_watch_ultra__ebzaahharnue_large.png" alt="apple watch ultra"></span>
-            <span>Adventure awaits.</span>
-            <div class="mainpagelink"><a href="">Learn More ></a> <a href="">Buy ></a></div>
-        </div>
-    </div> -->
+
 </div>
 
 @endsection
